@@ -1,324 +1,306 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-size: 12px;
-  color: #555;
-  overflow-x: hidden;
+// レイアウト確認用CSS
+.rayout-check {
+  background-color: antiquewhite;
+  border: 1px solid black;
+  height: 260px;
 }
 
-.wrapper {
+body {
+  min-height: 100vh;
+  color: #555;
+  font-size: 12px;
+}
+
+.header {
   width: 980px;
   margin: 0 auto;
-}
-
-header {
-  height: 90px;
-}
-
-#header-logo {
-  float: left; 
-  padding-top: 43px;
-}
-
-.header-lang-select {
-  margin: 10px 10px 0 0;
-  float: right;
-  vertical-align: middle;
-}
-
-.header-menu {
-  text-align: right;
-  padding-top: 31px;
   
-  & .on-menu {
-    position: absolute;
-    opacity: 0;
-
-    &:hover {
-      opacity:0.9;
-      transition-duration: 0.8s;
-    }
+  &__logo {
+    padding-top : 48px;
+    float: left;
   }
-}
-
-.header-select {
-  margin-left: -4px;
-}
-
-.header-sitemap {
-  margin-top: 10px;
-  margin-left: 15px;
-}
-
-.twitter-logo {
-  margin-bottom: 10px;
-}
-
-#slide-wrapper {
-  margin: 0 auto 40px;
-  width: 880px;
-  height: 270px;
-
-  .slider ul{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    width: 880px;
-    height: 231px;
-    list-style: none;
-    padding:0;
-
-    & li {
-      width: 200px;
-      padding-top: 50px;
-
-      & p {
-        text-align: left;
+  
+  &__above {
+    text-align: right;
+    padding-top: 15px;
+  }
+  
+  &__menu {
+    text-align: right;
+  }
+  
+  &__item {
+    margin-right: -5px;
+    &_on {
+      position: absolute;
+      opacity: 0;
+      &:hover {
+        opacity: 0.9;
+        transition-duration: 0.8s;
       }
     }
-
-    &  a {
-      width: 200px;
-      height: 181px;
+    &_twitterLogo_on {
+      margin-bottom: 10px;
+      &:hover {
+        opacity: 0.5;
+        transition-duration: 0.8s;
+      }
     }
   }
 }
+  
+  //header部分　ここまで
+  
+  
+.heroSlider {
+  width: 980px;
+  margin: 0 auto;
 
-#main-wrapper {
+}
+
+.sliderList {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0 50px;
+  
+  &__item {
+    width: 200px;
+    height:181px;
+    padding-top: 50px;
+  }
+
+  &__text {
+    margin-top: 20px;
+  }
+}
+
+//hero部分　ここまで
+
+
+
+.main {
+  //main 背景
   background-color: #f1f1f1;
-  background-image: radial-gradient(#eee 10%, transparent 20%), radial-gradient(#eee 10%, transparent 20%);
+  background-image: radial-gradient(rgb(230, 230, 230) 10%, transparent 20%), radial-gradient(rgb(230, 230, 230) 10%, transparent 20%);
   background-size: 5px 5px;
   background-position: 0 0, 2px 2px;
-  height:870px;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
 }
-#main-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  height: 870px;
-  width: 980px;
-  margin: 0 auto 30px;
-  padding: 25px 0;
 
-  & .contents-box {
+.contents {
+  width: 980px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+  
+  &__box {
     border-radius: 5px;
     border: 1px solid #e1e1e1;
     background-color: #fff;
     padding: 18px;
     box-shadow: 1px 1px 2px #CCC;
-  }
+    box-shadow: 1px 1px 2px #CCC;
+    line-height: 1.6;
 
-  & .first-row-col {
-    height: 380px;
-    width: 45.6%;
-
-    & ul {
-      padding-inline-start: 0;
-    }
-
-    & ul li {
-      display: flex; 
-      margin-top: 10px;     
-    }
-
-    & .news-day {
-      width: 50px;
-      font-size: 10px;
-      margin-right: 13px;
-    }
-
-    & .news-detail {
-      width: 380px;
-      margin: 0;
-      line-height: 1.6;
-    }
-
-    & .news-detail-link {
-      color: #074996;
-      text-decoration: none;
-      
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  & .second-row-col {
-    height:195px;
-    width: 20%;
-    margin-top: 8px;
-
-    & .second-row-col-detail {
-      list-style: none;
-      line-height: 1.6;
-      padding-inline-start: 0;
-
-    }
-  }
-  .products {
-    background-image: url(images/index_products_bk.jpg);
-    background-position: bottom;
-    background-repeat: no-repeat;
-  }
-  .site {
-    background-image: url(images/index_media_bk.jpg);
-    background-position: bottom;
-    background-repeat: no-repeat;
-  }
-  .access {
-    background-image: url(images/index_company_bk.jpg);
-    background-position: bottom;
-    background-repeat: no-repeat;
-  }
-  .recruit {
-    background-image: url(images/index_recruit_bk.jpg);
-    background-position: bottom;
-    background-repeat: no-repeat;
-  }
-
-
-  & .third-row-col {
-    height: 105px;
-    width: 20%;
-    margin-bottom: 45px;
-    margin-top: 8px;
-
-    & ul {
-      margin-top: 10px;
-      padding-inline-start: 0;
-    }
-
-    & li {
-      list-style: none;
-      line-height: 1;
-      margin-top: 10px;
-    }
-
-    & li a {
-      color: #074996;
-        text-decoration: none;
-        
-  
-        &:hover {
-          text-decoration: underline;
-        }
+    &--firstRowCols {
+      margin-top: 25px;
+      box-sizing: border-box;
+      width: calc(50% - 5px);
     }
     
-    & p {
-      padding-top: 15px;
-      line-height: 1.6;
+    &--secondRowCols {
+      width: 195px;
+      height:195px;
+      margin-top: 10px;
+    }
+    
+    &--thirdRowCols {
+      width: 195px;
+      height: 105px;
+      margin-top: 10px;
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 10;
+    }
+
+    &--bgProducts {
+      background-image: url(images/index_products_bk.jpg);
+      background-position: bottom;
+      background-repeat: no-repeat;
+    }
+    
+    &--bgSite {
+      background-image: url(images/index_media_bk.jpg);
+      background-position: bottom;
+      background-repeat: no-repeat;
+    }
+    
+    &--bgAccess {
+      background-image: url(images/index_company_bk.jpg);
+      background-position: bottom;
+      background-repeat: no-repeat;
+    }
+    
+    &--bgRecruit {
+      background-image: url(images/index_recruit_bk.jpg);
+      background-position: bottom;
+      background-repeat: no-repeat;
+    }
+    
+  }
+
+  &__titleWrapper {
+    position: absolute;
+    background-color: #e9f2fd;
+    right: 0;
+    left: 0;
+    top: 0;
+    height:40%;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 10;
+  }
+  
+  &__date {
+    font-size: 10px;
+    width: 50px;
+  }
+  
+  &__item {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  &__detail {
+    width: 380px;
+    margin-left: 12px;
+  }
+
+  &__text {
+    margin-top: 27px;
+  }
+
+  &__link {
+    color: #074996;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
     }
   }
-
-  & .recent-news ul {
-    list-style: none;
-
-  }
-
-  & .contents-menu:hover {
-    opacity: 0.8
+  
+  &__list--topSpace {
+    margin-top: 15px;
   }
 }
-
-footer {
-  height: 300px;
-  text-align: center;
+  //main部分　ここまで
+  
+  
+.footer {
   font-size: 10px;
   color: #949494;
-  margin-right: 100px;
+  width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+    
+.sns {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 10px;
 
-
-  & .pagetop_button {
-    position: absolute;
-    margin: 0 65%;
-    width: 46px;
-    height: 46px;
+  &__image_mixi {
+    width: 58px;
+    height: 18px;
   }
 
-  & .sns-link {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    height:20px;
+  &__twitter {
+    position: relative;
+    height: 20px;
+    box-sizing: border-box;
+    padding: 3px 8px 1px 6px;
+    background-color: #22a7fa;
+    color: #fff;
+    border-radius: 3px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 0 6px;
+  }
 
-    & img {
-      height:18px;
-      
-    }
+  &__image_twitter {
+    height: 14px;
+    width: 14px;
+    vertical-align: middle;
+  }
 
-    & .twitter {
-      height: 20px;
-      & a {
-        display: flex;
-        height: 20px;
-        box-sizing: border-box;
-        padding: 2px 6px 0 6px;
-        background-color: #02aaf1;
-        color: #fff;
-        border-radius: 3px;
-        font-weight: 500;
-        margin: 0 6px;
-        text-decoration: none;
-      }
-    }
-    
-    
+  &__facebook {
+    height: 18px;
+    background: #1977F2;
+    border: 1px solid #1977F2;
+    padding: 0 10px;
+    border-radius: 3px;
+    color: #fff;
+    margin: 0;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+  
+  &__image_facebook {
+    height: 12px;
+  }
 
-    & .facebook a {
-      display: flex;
-      background: #4267b2;
-      border: 1px solid #4267b2;
-      padding: 0 6px;
-      border-radius: 3px;
-      color: #fff;
-      margin: 0;
-      white-space: nowrap;
-      text-decoration: none;
-      
-
-      & img {
-        background-color: rgba(255, 255, 255, 1);;
-      }
+  &__btn_hover {
+    &:hover {
+      opacity: 0.6;
     }
   }
 
-  & .all-products {
-    display:flex;
-    margin: 40px 0;
+  &__btn_white {
+    color: white;
+    text-decoration: none;
+  }
+}
+//footer contents部分
+.contents--footer {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+  
 
-    & p {
-      font-weight: bold;
-      padding: 35px 0px;
-      padding-right: 30px;
-    }
-    & ul {
-      list-style: none;
-      width: 220px;
-      padding-inline-start: 0;
-      text-align: left;
-      border-left:1px solid #e1e1e1;
-      padding-left: 35px;
+  .contents__title {
+    margin-top: 35px;
+    font-weight: bold;
+  }
 
-      & li {
-        width: 220px;
-      }
+}
 
-      & li a {
-        text-decoration: none;
-        color: #949494;
+.contentsListWrapper {
+  width: 750px;
+  display: flex;
+}
 
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
+.contentsVerticalBlock {
+  text-align: left;
+  border-left: 1px solid #e1e1e1;
+  padding-left: 35px;
+}
+  
+.contentsVerticalBlock__list {
+  width: 220px;
+  margin: 3px 0;
+  line-height: normal;
+}
+    
+.contentsVerticalBlock__link {
+  text-decoration: none;
+  color: #949494;
+  font-size: 10px;
+  &:hover {
+    text-decoration: underline;
   }
 }
